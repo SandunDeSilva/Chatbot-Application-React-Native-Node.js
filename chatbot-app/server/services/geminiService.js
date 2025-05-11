@@ -25,7 +25,7 @@ const getGeminiResponse = async (message) => {
 
     const response = await axios.post(url.toString(), body, {
       headers: { "Content-Type": "application/json" },
-      timeout: 10000,
+      timeout: 60000,
     });
 
     if (!response.data?.candidates?.[0]?.content?.parts?.[0]?.text) {
