@@ -1,0 +1,49 @@
+Chatbot Application - React Native & Node.js
+This is a full-stack chatbot application that combines:
+
+        Frontend: React Native mobile app with a chat interface
+
+        Backend: Node.js server with Express and MySQL database
+
+        AI Integration: Google Gemini API for generating responses
+
+    The app allows users to:
+        Send messages to the chatbot
+
+        Receive AI-generated responses
+
+        View conversation history in a chat interface
+
+1.  Set Up Your MySQL Database
+    Install MySQL and create a database (e.g., chatbot)
+
+    Create tables like users, messages, etc.
+    CREATE TABLE messages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_message TEXT NOT NULL,
+    bot_response TEXT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+
+2.  Backend (Node.js + Express) Setup
+    cd server
+    npm init -y
+
+        npm install express cors dotenv mysql2 axios
+
+create .env(inside server) and paste your Gemini API key
+GEMINI_API_KEY=your_google_gemini_api_key
+
+3.  Frontend Setup
+    cd client
+    npm install axios
+
+Run Your App 1. Start Backend
+cd server
+node index.js
+
+    2. Start Frontend
+        cd client
+        npx expo start
+
+change your local ip address in api.js file inside client/services
